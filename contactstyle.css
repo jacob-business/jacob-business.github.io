@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 245, 180)
+;
 }
 
 h1 {
@@ -14,11 +15,11 @@ h2 {
 }
 p {
   font-family: courier;
-  color: rgb(255, 153, 230)	;
+  color: rgb(200, 0, 200);
 }
 
 a:link {
-  color: rgb(255, 255, 153)	;
+  color: rgb(200, 200, 100)	;
 }
 
 /* visited link */
@@ -28,7 +29,7 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: rgb(153, 255, 255)	;
+  color: rgb(0, 0, 0)	;
 }
 
 /* selected link */
