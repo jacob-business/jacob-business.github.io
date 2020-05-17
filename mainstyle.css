@@ -35,3 +35,8 @@ a:hover {
 a:active {
   color: rgb(153, 153, 255)	;
 }
+
+mark {
+  background-color: black;
+  color: rgb(153, 255, 230);
+}
