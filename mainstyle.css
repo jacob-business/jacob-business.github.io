@@ -4,31 +4,36 @@ body {
 
 h1 {
   font-family: courier;
-
-  color: rgb(255, 153, 255);
+  color: rgb(255, 255, 255);
 
 }
 h2 {
   font-family: courier;
-  color: rgb(153, 255, 230);
+  color: rgb(255, 255, 255);
 }
 p {
   font-family: courier;
-  color: rgb(255, 153, 230)	;
+  color: rgb(255, 230, 255);
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 a:link {
-  color: rgb(255, 245, 180)	;
+  color: rgb(0, 255, 200)	;
 }
 
 /* visited link */
 a:visited {
-  color: rgb(153, 255, 230);
+  color: rgb(100, 100, 100);
 }
 
 /* mouse over link */
 a:hover {
-  color: rgb(255, 255, 255)	;
+  color: rgb(100, 100, 100)	;
 }
 
 /* selected link */
