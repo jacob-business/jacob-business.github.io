@@ -8,14 +8,18 @@
 <body> <!--this is the vissible part of the file-->
 	<nav><p><a href="/Users/jacobbutcher/Documents/jacob-business.github.io/index.html">Home</a> <a href="/Users/jacobbutcher/Documents/jacob-business.github.io/portfolio.html">Portfolio</a> <a href="https://abrasaxpress.bigcartel.com/">Store</a> <a href="/Users/jacobbutcher/Documents/jacob-business.github.io/contact.html">Contact / About</a> </p></nav>
 
+<p>Every time you click the button, the function returns a random number between 1 and 20:</p>
 
-<img src="/Users/jacobbutcher/Documents/jacob-business.github.io/gifs/barbarian.gif" width="300px">
+<button onclick="document.getElementById('demo').innerHTML = getRndInteger(1,20)">Fight!</button>
 
-<p>You find a swarthy barbarian guarding a hoard of gold coins. He looks pretty mean. What do you do?</p>
+<p id="demo"></p>
 
-<a href="X.html">Fight!</a> <a href="Y.html">Hide!</a>
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+</script>
 
-<a href="ROOM3.html">Go Back South</a>
 
 <br>
 
