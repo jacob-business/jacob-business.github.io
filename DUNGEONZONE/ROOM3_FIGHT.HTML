@@ -8,11 +8,11 @@
 <body> <!--this is the vissible part of the file-->
 	<nav><p><a href="../index.html">Home</a> <a href="../portfolio.html">Portfolio</a> <a href="https://abrasaxpress.bigcartel.com/">Store</a> <a href="../contact.html">Contact / About</a> </p></nav>
 
-<img src="wizard.gif" width="300px">
+<img src="goblins.gif" width="300px">
 
 <!--this stuff gets editted by the function itself at the end and updates every time the fight runs-->
-<p>The <span id="enemy"></span> has <span id="enemyHP"></span> hit points and deals <span id="enemyDamage"></span> damage.</p>
-<p>Every time you click the button, the function returns a random number between 1 and 20. If your attack roll is greater than 10, you will deal damage. Once the Wizard reaches 0 Hit Points you win the fight.
+<p>The <span id="enemy"></span> have <span id="enemyHP"></span> hit points and deal <span id="enemyDamage"></span> damage.</p>
+<p>Every time you click the button, the function returns a random number between 1 and 20. If your attack roll is greater than 10, you will deal damage. Once the Goblins reach 0 Hit Points you win the fight.
 </p>
 
 
@@ -22,9 +22,9 @@
 
 <script>
 	function fightFunction() {
-	var enemy = "Wizard";
-	var enemyHP = "6";
-	var enemyDamage = "6";
+	var enemy = "Goblins";
+	var enemyHP = "4";
+	var enemyDamage = "2";
 
 	function getRndInteger(min, max) {
 	  return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -39,7 +39,7 @@
 	  result = "You miss.";
 	}
 	if (enemyHP<1) {
-	result = "You hit. You deal " + damage + " damage. The Wizard is dead!";
+	result = "You hit. You deal " + damage + " damage. The goblins are dead!";
 	}
 
 	document.getElementById("demo").innerHTML = "Attack Roll = " + z + " " + result;
