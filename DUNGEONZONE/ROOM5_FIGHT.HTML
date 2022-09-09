@@ -6,27 +6,48 @@
 	<title>DUNGEONZONE</title> <!-- this is the title that will appear on the tab, not in the webpage itself -->
 </head>
 <body> <!--this is the vissible part of the file-->
-	<nav><p><a href="/Users/jacobbutcher/Documents/jacob-business.github.io/index.html">Home</a> <a href="/Users/jacobbutcher/Documents/jacob-business.github.io/portfolio.html">Portfolio</a> <a href="https://abrasaxpress.bigcartel.com/">Store</a> <a href="/Users/jacobbutcher/Documents/jacob-business.github.io/contact.html">Contact / About</a> </p></nav>
+	<nav><p><a href="../jacob-business.github.io/index.html">Home</a> <a href="../jacob-business.github.io/portfolio.html">Portfolio</a> <a href="https://abrasaxpress.bigcartel.com/">Store</a> <a href="../jacob-business.github.io/contact.html">Contact / About</a> </p></nav>
 
 <img src="/Users/jacobbutcher/Documents/jacob-business.github.io/gifs/wizard.gif" width="300px">
 
+<!--this stuff gets editted by the function itself at the end and updates every time the fight runs-->
 <p>The <span id="enemy"></span> has <span id="enemyHP"></span> hit points and deals <span id="enemyDamage"></span> damage.</p>
+<p>Every time you click the button, the function returns a random number between 1 and 20. If your attack roll is greater than 10, you will deal damage. Once the Wizard reaches 0 Hit Points you win the fight.
+</p>
+
+
+<p id="demo"></p>
+
+<button onclick="fightFunction()">Fight!</button>
+
 <script>
-  var enemy = "Wizard";
+	function fightFunction() {
+	var enemy = "Wizard";
 	var enemyHP = "6";
 	var enemyDamage = "6";
-  document.getElementById("enemy").innerHTML = enemy;
+
+	function getRndInteger(min, max) {
+	  return Math.floor(Math.random() * (max - min + 1) ) + min;
+	}
+
+	var z = getRndInteger(1, 20);
+	if (z > 10) {
+	  var damage = getRndInteger(1, 6);
+	  result = "You hit. You deal " + damage + " damage.";
+		var enemyHP=enemyHP - damage
+	} else {
+	  result = "You miss.";
+	}
+	if (enemyHP<1) {
+	result = "You hit. You deal " + damage + " damage. The Wizard is dead!";
+	}
+
+	document.getElementById("demo").innerHTML = "Attack Roll = " + z + " " + result;
+	document.getElementById("enemy").innerHTML = enemy;
 	document.getElementById("enemyHP").innerHTML = enemyHP;
 	document.getElementById("enemyDamage").innerHTML = enemyDamage;
+}
 </script>
-
-<br>
-<p>Every time you click the button, the function returns a random number between 1 and 20. If your attack roll is greater than 10, you will deal damage. Once the Wizard reaches 0 Hit Points you win the fight.</p>
-
-
-<script>
-</script>
-
 
 
 <br>
